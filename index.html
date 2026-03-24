@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <!--CSS link-->
+    <link rel="stylesheet" href="./style.css">
+    <!--JS link-->
+    <script src="./script.js"></script>
+    <!--Font Awesome Icon link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <h1>BMI Calculator</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="left">
+
+            <div class="card">
+                <h1 id="calcHead">Calculate your BMI</h1>
+                <div>
+                    <input type="number" id="weight" placeholder="Enter your Weight (kg)"> <br>
+                    <input type="number" id="height" placeholder="Enter your height (cm)">
+                </div>
+                <div>
+                    <button onclick="calculateBMI()">Calculate</button>
+                    <button onclick="reset()">Reset</button>
+                </div>
+
+                <div class="result" id="result"></div>
+                <div id="category"></div>
+            </div>
+        </div>
+
+        <!--Right Side: BMI Information-->
+        <div class="right">
+            <div class="card">
+                <h1>BMI Categories</h1>
+                <table>
+                    <!--Table Heading-->
+                    <tr>
+                        <th>BMI Range</th>
+                        <th>Category</th>
+                    </tr>
+                    <!--UnderWeight-->
+                    <tr>
+                        <td>&lt; 18.5</td>
+                        <td><i class="fa-solid fa-arrow-down" style="color: blue"></i>Underweight</td>
+                    </tr>
+                    <!--Normal-->
+                    <tr>
+                        <td>18.5 - 24.9</td>
+                        <td><i class="fa-solid fa-circle-check" style="color:green;"></i>Normal</td>
+                    </tr>
+                    <!--Overweight-->
+                    <tr>
+                        <td>25 - 29.9</td>
+                        <td><i class="fa-solid fa-triangle-exclamation" style="color:orange;"></i>Overweight</td>
+                    </tr>
+                    <!--Obese-->
+                    <tr>
+                        <td>&gt; 30</td>
+                        <td><i class="fa-solid fa-skull" style="color:red;"></i>Obese</td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer>© 2026 BMI Calculator | Built with HTML, CSS & JavaScript</footer>
+</body>
+
+</html>
